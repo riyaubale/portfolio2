@@ -1,0 +1,39 @@
+.animated-card {
+    position: relative;
+    background: #0a0a0a;
+    border-radius: 1.5rem;
+    padding: 1rem;
+    overflow: visible;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s ease;
+    transform-style: preserve-3d;
+    will-change: transform;
+    --glow-x: 50%;
+    --glow-y: 50%;
+    --glow-intensity: 0.5;
+    --glow-color: 132, 0, 255;
+    z-index: 1;
+  }
+  
+  /* glow layer sits behind content */
+  .animated-card::after {
+    content: "";
+    position: absolute;
+    inset: -3px;
+    border-radius: inherit;
+    background: radial-gradient(
+      circle at var(--glow-x) var(--glow-y),
+      rgba(var(--glow-color), var(--glow-intensity)) 0%,
+      rgba(var(--glow-color), 0.1) 30%,
+      transparent 60%
+    );
+    z-index: -1; /* 👈 behind the card */
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+  }
+  
+  .animated-card:hover::after {
+    opacity: 1;
+  }
+  

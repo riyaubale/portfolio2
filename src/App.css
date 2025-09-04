@@ -1,8 +1,23 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
   text-align: center;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+/* Tech-focused and elegant typography */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+body {
+  font-family: 'Space Grotesk', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
 }
 
 .logo {
@@ -11,9 +26,11 @@
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
@@ -22,6 +39,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -39,4 +57,175 @@
 
 .read-the-docs {
   color: #888;
+}
+
+/* Tech-focused headings with Space Grotesk - lowercase and balanced */
+.heading {
+  font-family: 'Space Grotesk', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+  color: white;
+  margin-bottom: 1.25rem;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+  font-feature-settings: "kern" 1, "liga" 1;
+  text-transform: lowercase;
+}
+
+/* Tech-focused body text with Space Grotesk - lowercase and subtle */
+.text {
+  font-family: 'Space Grotesk', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 1rem;
+  color: #e0e0e0;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0.005em;
+  max-width: 700px;
+  font-feature-settings: "kern" 1, "liga" 1;
+  text-transform: lowercase;
+}
+
+/* Tech-focused code snippet with JetBrains Mono - lowercase and compact */
+.code-snippet {
+  font-family: 'JetBrains Mono', 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+  background: linear-gradient(135deg, #0a0a0a, #111111);
+  color: #e0e0e0;
+  padding: 1.25rem 1.5rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  text-align: left;
+  box-shadow: 
+    0 2px 12px rgba(132, 0, 255, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.03);
+  overflow-x: auto;
+  font-feature-settings: "liga" 1, "calt" 1;
+  border: 1px solid rgba(132, 0, 255, 0.15);
+  position: relative;
+}
+
+.code-snippet::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, #8b5cf6, #a855f7, #8b5cf6);
+  border-radius: 8px 8px 0 0;
+}
+
+.code-snippet code {
+  display: block;
+}
+
+.code-keyword {
+  color: #c792ea;
+  font-weight: 500;
+}
+
+.code-variable {
+  color: #82aaff;
+  font-weight: 400;
+}
+
+.code-property {
+  color: #ffcb6b;
+  font-weight: 400;
+}
+
+.code-string {
+  color: #c3e88d;
+}
+
+.code-boolean {
+  color: #89ddff;
+}
+
+.code-function {
+  color: #82aaff;
+}
+
+.perspective {
+  perspective: 1200px;
+}
+
+.transform-style {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.trail-dot {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: radial-gradient(circle at center, #8b5cf6, transparent 70%);
+  pointer-events: none;
+  z-index: 9999;
+  animation: fadeOut 0.8s forwards;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: scale(2);
+  }
+}
+
+/* Additional tech-focused typography classes - lowercase and subtle */
+.tech-heading {
+  font-family: 'Space Grotesk', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+  text-transform: lowercase;
+  font-size: 1.75rem;
+}
+
+.tech-text {
+  font-family: 'Space Grotesk', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.005em;
+  font-size: 0.9rem;
+  text-transform: lowercase;
+}
+
+.monospace-code {
+  font-family: 'JetBrains Mono', 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+  font-feature-settings: "liga" 1, "calt" 1;
+}
+
+/* Tech-focused button styles - lowercase and compact */
+.tech-button {
+  font-family: 'Space Grotesk', 'Inter', sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  text-transform: lowercase;
+  font-size: 0.8rem;
+}
+
+/* Terminal-style text - lowercase and smaller */
+.terminal-text {
+  font-family: 'JetBrains Mono', 'SF Mono', Monaco, monospace;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  color: #00ff00;
+  text-shadow: 0 0 4px rgba(0, 255, 0, 0.3);
+  font-size: 0.85rem;
+  text-transform: lowercase;
 }

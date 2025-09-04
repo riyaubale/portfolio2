@@ -1,0 +1,15 @@
+.text-type__cursor {
+    display: inline-block;
+    animation: blink 1s step-start infinite;
+  }
+  
+  .text-type__cursor--hidden {
+    visibility: hidden;
+  }
+  
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
+  
