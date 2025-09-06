@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import TextType from './components/TextType';
 import Dock from './components/Dock';
-import DecryptedText from './components/DecryptedText';
 import PixelTransition from './components/PixelTransition';
 import AnimatedCard from './components/AnimatedCard';
 import { VscHome, VscAccount, VscBook, VscGithub, VscMail } from 'react-icons/vsc';
@@ -95,7 +94,7 @@ export default function App() {
         <SplashCursor
           TRANSPARENT
           BACK_COLOR={{ r: 0, g: 0, b: 0 }}
-          DYE_RESOLUTION={720}   // desktop quality
+          DYE_RESOLUTION={720}
           SIM_RESOLUTION={96}
           CURL={4}
           SPLAT_FORCE={5000}
@@ -145,13 +144,7 @@ export default function App() {
           </AnimatedCard>
 
           <AnimatedCard className="w-full h-[24rem] flex-1 flex flex-col justify-center">
-            <DecryptedText
-              text="About Me"
-              className="heading"
-              encryptedClassName="text-white"
-              animateOn="view"
-              speed={150}
-            />
+            <h2 className="heading mb-4">About Me</h2>
             <motion.pre
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -178,13 +171,7 @@ export default function App() {
       {/* Experience */}
       <section id="experience" className="py-32 bg-black">
         <div className="max-w-7xl mx-auto px-6 flex flex-col items-center">
-          <DecryptedText
-            text="Experience"
-            className="heading"
-            encryptedClassName="text-white"
-            animateOn="view"
-            speed={150}
-          />
+          <h2 className="heading">Experience</h2>
           <p className="text-sm text-gray-400 mt-4 italic text-center tech-text">
             scroll sideways →
           </p>
@@ -202,14 +189,14 @@ export default function App() {
           <div className="w-full flex flex-col md:flex-row gap-12">
             <div className="flex-1 w-full">
               <div className="mb-4">
-                <DecryptedText text="Skills:" className="heading" encryptedClassName="text-white" animateOn="view" speed={150} />
+                <h2 className="heading">Skills:</h2>
               </div>
               <Skills />
             </div>
 
             <div className="flex-1 w-full flex flex-col">
               <div className="mb-4">
-                <DecryptedText text="Projects:" className="heading" encryptedClassName="text-white" animateOn="view" speed={150} />
+                <h2 className="heading">Projects:</h2>
               </div>
               <ProjectShell projects={projectCards} />
             </div>
