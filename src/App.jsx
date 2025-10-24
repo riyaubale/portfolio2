@@ -21,6 +21,15 @@ export default function App() {
     window.scrollTo({ top: 0, left: 0 });
   }, []);
 
+  useEffect(() => {
+    var _mtm = window._mtm = window._mtm || [];
+    _mtm.push({'mtm.startTime': (new Date().getTime()), 'event': 'mtm.Start'});
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; 
+    g.src='https://cdn.matomo.cloud/YOUR-MATOMO-SITE.matomo.cloud/container_S5a2osIv.js';
+    s.parentNode.insertBefore(g,s);
+  }, []);
+
   const [showSplash, setShowSplash] = useState(false);
   useEffect(() => {
     const canShow =
